@@ -1,0 +1,235 @@
+
+ACM Transactions on Graphics (TOG)
+
+Recent issue:
+@article{Khungurn:2017:ASE:3068851.2998578,
+author = {Khungurn, Pramook and Marschner, Steve},
+title = {Azimuthal Scattering from Elliptical Hair Fibers},
+journal = {ACM Trans. Graph.},
+issue_date = {April 2017},
+volume = {36},
+number = {2},
+month = apr,
+year = {2017},
+issn = {0730-0301},
+pages = {13:1--13:23},
+articleno = {13},
+numpages = {23},
+url = {http://doi.acm.org/10.1145/2998578},
+doi = {10.1145/2998578},
+acmid = {2998578},
+publisher = {ACM},
+address = {New York, NY, USA},
+keywords = {Hair, fibers, optical scattering, rendering},
+}
+
+Older issue:
+
+@article{Summa:2011:IEM:1944846.1944847,
+author = {Summa, Brian and Scorzelli, Giorgio and Jiang, Ming and Bremer, Peer-Timo and Pascucci, Valerio},
+title = {Interactive Editing of Massive Imagery Made Simple: Turning Atlanta into Atlantis},
+journal = {ACM Trans. Graph.},
+issue_date = {April 2011},
+volume = {30},
+number = {2},
+month = apr,
+year = {2011},
+issn = {0730-0301},
+pages = {7:1--7:13},
+articleno = {7},
+numpages = {13},
+url = {http://doi.acm.org/10.1145/1944846.1944847},
+doi = {10.1145/1944846.1944847},
+acmid = {1944847},
+publisher = {ACM},
+address = {New York, NY, USA},
+keywords = {Poisson equation, cache-oblivious data layout, gigapixel images, gradient domain editing, out-of-core processing},
+}
+
+IEEE Transactions on Visualization and Computer Graphics (TVCG):
+Recent issue:
+@ARTICLE{7829397,
+author = {C. Li and W. Liang and C. Quigley and Y. Zhao and L. Yu},
+journal = {IEEE Transactions on Visualization & Computer Graphics},
+title = {Earthquake Safety Training through Virtual Drills},
+year = {2017},
+volume = {23},
+number = {4},
+pages = {1275-1284},
+keywords={Training;Earthquakes;Virtual environments;Solid modeling;Safety;Injuries},
+doi = {10.1109/TVCG.2017.2656958},
+url = {doi.ieeecomputersociety.org/10.1109/TVCG.2017.2656958},
+ISSN = {1077-2626},
+month={April}
+}
+Old issue:
+@ARTICLE{,
+author = {Z. Liu and R. J. Moorhead},
+journal = {IEEE Transactions on Visualization & Computer Graphics},
+title = {Accelerated Unsteady Flow Line Integral Convolution},
+year = {2005},
+volume = {11},
+number = {},
+pages = {113-125},
+keywords={Flow visualization; vector field visualization; line integral convolution; unsteady flows; UFLIC; texture synthesis; image convolution; acceleration.},
+doi = {10.1109/TVCG.2005.21},
+url = {doi.ieeecomputersociety.org/10.1109/TVCG.2005.21},
+ISSN = {1077-2626},
+month={03}
+
+
+
+IEEE Computer Graphics and Applications (CG&A)
+Recent issue:
+@ARTICLE{7436633, 
+author={Y. Onoue and N. Kukimoto and N. Sakamoto and K. Misue and K. Koyamada}, 
+journal={IEEE Computer Graphics and Applications}, 
+title={Layered Graph Drawing for Visualizing Evaluation Structures}, 
+year={2017}, 
+volume={37}, 
+number={2}, 
+pages={20-30}, 
+keywords={cognition;data visualisation;graph theory;Sugiyama framework;evaluation grid method;evaluation structure visualization;human cognition extraction;layered graph drawing;Cognition;Data visualization;Human factors;Layout;Linear programming;Quadratic programming;Transforms;Kansei engineering;Sugiyama framework;computer graphics;evaluation grid method;layered graph drawing}, 
+doi={10.1109/MCG.2016.40}, 
+ISSN={0272-1716}, 
+month={Mar},}
+Old issue:
+@ARTICLE{824451, 
+author={Pak Chung Wong and H. Foote and R. Leung and D. Adams and J. Thomas}, 
+journal={IEEE Computer Graphics and Applications}, 
+title={Data signatures and visualization of scientific data sets}, 
+year={2000}, 
+volume={20}, 
+number={2}, 
+pages={12-15}, 
+keywords={climatology;computational complexity;data structures;data visualisation;geophysics computing;scientific information systems;categorical data sets;data sets;data signature;data signatures;data size;data size problems;desktop workstations;eigenvector computation;heterogeneous data sets;high-dimensional data sets;metric designs;multiple data types;projection techniques;scientific data set;scientific data set visualization;time-dependent climate simulation data set;Buildings;Combustion;Computational modeling;Data visualization;Laboratories;Research and development;Tensile stress;Text analysis;Text recognition;Workstations}, 
+doi={10.1109/38.824451}, 
+ISSN={0272-1716}, 
+month={Mar},}
+
+
+ACM SIGGRAPH Computer Graphics
+Recent issue:
+@article{Koyama:2017:SLS:3072959.3073598,
+author = {Koyama, Yuki and Sato, Issei and Sakamoto, Daisuke and Igarashi, Takeo},
+title = {Sequential Line Search for Efficient Visual Design Optimization by Crowds},
+journal = {ACM Trans. Graph.},
+issue_date = {July 2017},
+volume = {36},
+number = {4},
+month = jul,
+year = {2017},
+issn = {0730-0301},
+pages = {48:1--48:11},
+articleno = {48},
+numpages = {11},
+url = {http://doi.acm.org/10.1145/3072959.3073598},
+doi = {10.1145/3072959.3073598},
+acmid = {3073598},
+publisher = {ACM},
+address = {New York, NY, USA},
+keywords = {bayesian optimization, computational design, crowdsourcing, human computation},
+}
+---------------------------------------------------------------------------------------------------------------------
+Computers and Graphics :
+Recent issue:
+@article{LEE20181,
+title = "Heuristic misfit reduction: A programmable approach for 3D garment fit customization",
+journal = "Computers & Graphics",
+volume = "71",
+pages = "1 - 13",
+year = "2018",
+issn = "0097-8493",
+doi = "https://doi.org/10.1016/j.cag.2017.10.004",
+url = "http://www.sciencedirect.com/science/article/pii/S009784931730170X",
+author = "Wonseop Lee and Hyeong-Seok Ko",
+keywords = "Clothing simulation, Fit customization, Pattern-making, Computer animation"
+}
+
+
+
+Old issue:
+@article{PAN1996191,
+title = "Distributed graphics support for virtual environments",
+journal = "Computers & Graphics",
+volume = "20",
+number = "2",
+pages = "191 - 197",
+year = "1996",
+note = "Techniques for Virtual Environments",
+issn = "0097-8493",
+doi = "https://doi.org/10.1016/0097-8493(95)00125-5",
+url = "http://www.sciencedirect.com/science/article/pii/0097849395001255",
+author = "Zhigeng Pan and Jiaoying Shi and Mingmin Zhang"
+}
+Computer Graphics Forum (CGF)
+Recent issue: 
+@article{12318894020170501,
+Abstract = {Light painting is an artform where a light source is moved during a long-exposure shot, creating trails resembling a stroke on a canvas. It is very difficult to perform because the light source needs to be moved at the intended speed and along a precise trajectory. Additionally, images can be corrupted by the person moving the light. We propose computational light painting, which avoids such artifacts and is easy to use. Taking a video of the moving light as input, a virtual exposure allows us to draw the intended light positions in a post-process. We support animation, as well as 3D light sculpting, with high-quality results. [ABSTRACT FROM AUTHOR]},
+Author = {Salamon, Nestor Z. and Lancelle, Marcel and Eisemann, Elmar},
+ISSN = {01677055},
+Journal = {Computer Graphics Forum},
+Keywords = {LIGHT sources, ANIMATION (Cinematography), ARRAY processing, DIGITAL cameras, Categories and Subject Descriptors (according to ACM CCS), I.3.4 [Computer Graphics]: Graphics Utilities-Paint systems, MAN Ray, 1890-1976},
+Number = {2},
+Pages = {1 - 8},
+Title = {Computational Light Painting Using a Virtual Exposure.},
+Volume = {36},
+URL = {https://umasslowell.idm.oclc.org/login?url=http://search.ebscohost.com/login.aspx?direct=true&db=aph&AN=123188940&site=ehost-live},
+Year = {2017},
+}
+
+Old issue:
+@article{946515620030301,
+Abstract = {Abstract While using hierarchical search structures has been proved as one of the most efficient acceleration techniques when rendering complex scenes, automatic creation of appropriate hierarchies is not solved yet. Well-known algorithms for automatic creation of bounding volume hierarchies are not enough. Higher performance is achieved by introducing spatial uniform subdivision, although algorithms proposed up to now are not truly automatic, as they need some parameters to be adjusted. In this paper we present a full-automatic hierarchy creation scheme that structures the scene in a hybrid way, combining bounding volumes and voxel grids in the same tree, selecting the search structure that best fits to each scene region. It uses no parameters at all. This efficient proposal relies on a new cost model that estimates the goodness of a hybrid hierarchy if used for rendering the scene. ACM CSS: I.3.7 Computer Graphics—Three-Dimensional Graphics and Realism. [ABSTRACT FROM AUTHOR]},
+Author = {Massó, J. P. Molina and López, P. González},
+ISSN = {01677055},
+Journal = {Computer Graphics Forum},
+Keywords = {COMPUTER graphics, COMPUTATIONAL grids (Computer systems), bounding boxes, cost model, hybrid hierarchies, scene decomposition, voxel grids},
+Number = {1},
+Pages = {5 - 13},
+Title = {Automatic Hybrid Hierarchy Creation: a Cost-model Based Approach.},
+Volume = {22},
+URL = {https://umasslowell.idm.oclc.org/login?url=http://search.ebscohost.com/login.aspx?direct=true&db=aph&AN=9465156&site=ehost-live},
+Year = {2003},
+}
+
+________________________________________
+
+Visual Computer
+Recent issue:
+@Article{Asadipour2017,
+author="Asadipour, Ali
+and Debattista, Kurt
+and Chalmers, Alan",
+title="Visuohaptic augmented feedback for enhancing motor skills acquisition",
+journal="The Visual Computer",
+year="2017",
+month="Apr",
+day="01",
+volume="33",
+number="4",
+pages="401--411",
+abstract="Serious games are accepted as an effective approach to deliver augmented feedback in motor (re-)learning processes. The multi-modal nature of the conventional computer games (e.g. audiovisual representation) plus the ability to interact via haptic-enabled inputs provides a more immersive experience. Thus, particular disciplines such as medical education in which frequent hands on rehearsals play a key role in learning core motor skills (e.g. physical palpations) may benefit from this technique. Challenges such as the impracticality of verbalising palpation experience by tutors and ethical considerations may prevent the medical students from correctly learning core palpation skills. This work presents a new data glove, built from off-the-shelf components which captures pressure sensitivity designed to provide feedback for palpation tasks. In this work the data glove is used to control a serious game adapted from the infinite runner genre to improve motor skill acquisition. A comparative evaluation on usability and effectiveness of the method using multimodal visualisations, as part of a larger study to enhance pressure sensitivity, is presented. Thirty participants divided into a game-playing group ( {\$}{\$}n=15{\$}{\$} n = 15 ) and a control group ( {\$}{\$}n=15{\$}{\$} n = 15 ) were invited to perform a simple palpation task. The game-playing group significantly outperformed the control group in which abstract visualisation of force was provided to the users in a blind-folded transfer test. The game-based training approach was positively described by the game-playing group as enjoyable and engaging.",
+issn="1432-2315",
+doi="10.1007/s00371-016-1275-3",
+url="https://doi.org/10.1007/s00371-016-1275-3"
+}
+
+Old issue:
+@Article{Wu2000,
+author="Wu, Jiann-Rong
+and Ouhyoung, Ming",
+title="On latency compensation and its effects on head-motion trajectories in virtual environments",
+journal="The Visual Computer",
+year="2000",
+month="Mar",
+day="01",
+volume="16",
+number="2",
+pages="79--90",
+issn="1432-2315",
+doi="10.1007/s003710050198",
+url="https://doi.org/10.1007/s003710050198"
+}
+
+
