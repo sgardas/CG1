@@ -1,0 +1,373 @@
+<!-- Satwik Gardas -->
+<!-- 01639615 -->
+<!-- Satwik_Gardas@student.uml.edu -->
+<!-- Programming Assignment 1 -->
+<!-- http://www.cs.uml.edu/~sgardas/427546s2018/prog-hws1/ -->
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>HW-1</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" crossorigin="anonymous">
+
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+</head>
+<body style="font-family:courier;">
+<body background="one.jpg">
+<div class="container-fluid">
+<div class=" pull-up text-center" >
+<h1 style="text-align:center-left;padding: 1em; color: white; background-color: black; clear: left; text-align: center;"><b> 2D Drawing </b></h1>
+<p><b> Select Color and then choose below entities...</b></p>
+
+<br>
+<style>
+/* The container */
+.container {
+display: block;
+position: relative;
+margin-bottom: 5px;
+cursor: pointer;
+font-size: 18px;
+-webkit-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.container input {
+position: relative;
+margin-right: 25cm;
+opacity: 0;
+cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmark {
+position: absolute;
+top: 0;
+left: 0;
+height: 25px;
+width: 25px;
+background-color: black;
+border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+background-color: darkgrey;
+}
+
+/* When the radio button is checked, add a white background */
+.container input:checked ~ .checkmark {
+background-color: ghostwhite;
+;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+content: "";
+position: absolute;
+display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.container input:checked ~ .checkmark:after {
+display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.container .checkmark:after {
+top: 9px;
+left: 9px;
+width: 8px;
+height: 8px;
+border-radius: 50%;
+background: blue;
+}
+</style>
+<body>
+
+<label class="container">Black
+<input type="radio" id="color" name="color" value="black">
+<span class="checkmark"></span>
+</label>
+<label class="container">Red
+<input type="radio" id="color" name="color" value="red">
+<span class="checkmark"></span>
+</label>
+<label class="container">Blue
+<input type="radio" id="color" name="color" value="blue">
+<span class="checkmark"></span>
+</label>
+
+</body>
+<input type="button" class="btn btn-primary" onclick="selectLine()" value="Line">
+<input type="button" class="btn btn-primary" onclick="selectCircle()" value="Circle">
+<input type="button" class="btn btn-primary" onclick="selectPolygon()" value="Polygon">
+<input type="button" class="btn btn-primary" onclick="selectRectangle()" value="Rectangle" >
+<input type="button" class="btn btn-primary" onclick="selectEllipse()" value="Eclipse" >
+</div>
+
+<div class="pull-right" style="padding-right:150px;padding-bottom:15px;">
+<input class="btn btn-primary btn-block" onclick="clearScreen()" value="Clean Canvas" >
+</div>
+
+<div class="" style="width:100%;padding-left: 120px; padding-right: 120px;">
+<canvas id="myCanvas" class= "cv" width="1100" height="400" style= "border:2px solid black"></canvas>
+</div>
+<style>
+.footer {
+position:relative;
+left: 0;
+bottom: 0;
+width: 100%;
+background-color: black;
+color: white;
+text-align: center;
+}
+</style>
+<div class="footer">
+<p>Satwik Gardas</p>
+</div>
+<script>
+var canvas;
+var context;
+var Startingpoint = true;
+
+var selectEllipse = function()
+{
+canvas = document.getElementById('myCanvas');
+context = canvas.getContext('2d');
+canvas.addEventListener("mousedown", drawEllipse, false);
+}
+var selectPolygon = function()
+{ 
+canvas = document.getElementById('myCanvas');
+context = canvas.getContext('2d');
+canvas.addEventListener("mousedown", drawPolygon, false);
+}
+var selectLine = function()
+{
+canvas = document.getElementById('myCanvas');
+context = canvas.getContext('2d');
+canvas.addEventListener("mousedown", drawLine, false);
+}
+var selectRectangle = function()
+{
+canvas = document.getElementById('myCanvas');
+context = canvas.getContext('2d');
+canvas.addEventListener("mousedown", drawRectangle, false);
+}
+var selectCircle = function()
+{
+canvas = document.getElementById('myCanvas');
+context = canvas.getContext('2d');
+canvas.addEventListener("mousedown", drawCircle, false);
+}
+
+function distance(a1, a2, a3, a4){
+dx = a1 - a3;
+dx *= dx;
+dy = a4 - a2;
+dy *= dy;
+return Math.sqrt(dx + dy);
+}
+
+var drawPolygon = function(event){
+if (Startingpoint){
+polyx0 = event.x;
+
+polyy0 = event.y;
+polyx0 -= canvas.offsetLeft;
+polyy0 -= canvas.offsetTop;
+Startingpoint = false;
+}
+else if (!Startingpoint){
+polyx1 = event.x;
+polyy1 = event.y;
+polyx1 -= canvas.offsetLeft;
+polyy1 -= canvas.offsetTop;
+Startingpoint = true;
+}
+if(polyx1 != null && polyy1 != null){
+dLine(polyx0, polyy0, polyx1, polyy1);
+}
+}
+var drawLine = function(event){
+if (Startingpoint){
+linex0 = event.x;
+liney0 = event.y;
+
+linex0 -= canvas.offsetLeft; 		
+liney0 -= canvas.offsetTop;
+Startingpoint = false;
+}
+else if (!Startingpoint){
+linex1 = event.x;
+liney1 = event.y;
+linex1 -= canvas.offsetLeft;
+liney1 -= canvas.offsetTop;
+}
+if(linex1 != null && liney1 != null){
+context.clearRect(0, 0, 1000, 300);
+dLine(linex0, liney0, linex1, liney1);
+}
+}
+
+var drawCircle = function(event){
+if (Startingpoint){
+circlex0 = event.x;
+circley0 = event.y;
+circlex0 -= canvas.offsetLeft;
+
+circley0 -= canvas.offsetTop;
+Startingpoint = false;
+}
+else if (!Startingpoint){
+context.clearRect(0, 0, 1000, 300);
+circlex1 = event.x;
+circley1 = event.y;
+circlex1 -= canvas.offsetLeft;
+circley1 -= canvas.offsetTop;
+
+dCircle(circlex0, circley0, distance(circlex0, circley0, circlex1, circley1));
+}
+}
+var drawRectangle = function(event){
+if (Startingpoint){
+rectx0 = event.x;
+recty0 = event.y;
+
+rectx0 -= canvas.offsetLeft;
+recty0 -= canvas.offsetTop;
+Startingpoint = false;
+}
+else if (!Startingpoint){
+context.clearRect(0, 0, 900, 300);
+rectx1 = event.x;
+recty1 = event.y;
+rectx1 -= canvas.offsetLeft;
+recty1 -= canvas.offsetTop;
+dLine(rectx0, recty0, rectx1, recty0);
+dLine(rectx1, recty0, rectx1, recty1);
+dLine(rectx1, recty1, rectx0, recty1);
+dLine(rectx0, recty1, rectx0, recty0);
+}
+}
+var drawEllipse = function(event){
+if (Startingpoint){
+elipx0 = event.x;
+elipy0 = event.y;
+elipx0 -= canvas.offsetLeft;
+elipy0 -= canvas.offsetTop;
+Startingpoint = false;
+}
+else if (!Startingpoint){
+context.clearRect(0, 0, 9000, 300);
+context.fillStyle = "#FF0000";
+elipx1 = event.x;
+elipy1 = event.y;
+elipx1 -= canvas.offsetLeft;
+elipy1 -= canvas.offsetTop;
+dEllipse(elipx0, elipy0, distance(elipx0, elipy0, elipx1, elipy0), distance(elipx1, elipy0, elipx1, elipy1));
+}
+}
+
+var clearScreen = function(){
+location.reload(true);
+}
+
+
+</script>
+<script>
+var dLine = function(x0, y0, x1, y1) {
+var dx = Math.abs(x1 - x0);
+var dy = Math.abs(y1 - y0);
+var sx = (x0 < x1) ? 1 : -1;
+var sy = (y0 < y1) ? 1 : -1;
+var error = dx - dy;
+while(!((x0 == x1) && (y0 == y1))){
+var c2 = error << 1;
+if (c2 > -dy) {
+error -= dy;
+x0 += sx;
+}
+if (c2 < dx) {
+error += dx;
+y0 += sy;
+}
+context.fillStyle = document.querySelector('input[name = "color"]:checked').value;
+context.fillRect(x0, y0, 1, 1)
+}
+}
+
+var isEmpty=function isCanvasBlank(canvas) {
+var blank = document.createElement('canvas');
+blank.width = canvas.width;
+blank.height = canvas.height;
+
+return canvas.toDataURL() == blank.toDataURL();
+}
+var dEllipse = function(xz, yz, a, b){
+var x = -a;
+var y = 0;
+var a2 = a * a;
+var b2 = b * b;
+var c2 = b;
+dx = (1 + 2 * x) * c2 * c2;
+dy = x * x;
+error = dx + dy;
+
+while (x <= 0){
+context.fillStyle = document.querySelector('input[name = "color"]:checked').value; 
+context.fillRect(xz - x, yz + y, 1, 1);
+context.fillRect(xz + x, yz + y, 1, 1);
+context.fillRect(xz + x, yz - y, 1, 1);
+context.fillRect(xz - x, yz - y, 1, 1);
+
+c2 = 2 * error;
+if (c2 >= dx){
+x++;
+error += dx += 2 * b2;
+}
+if (c2 <= dy){
+y++;
+error += dy += 2 * a2;
+}
+}
+while (y++ < b) {
+context.fillStyle = document.querySelector('input[name = "color"]:checked').value;
+context.fillRect(xz, yz + y, 1, 1);
+context.fillRect(xz, yz - y, 1, 1);
+}
+}
+var dCircle = function(x0, y0, r){
+var x = r;
+var y = 0;
+var error = 1 - x;
+
+while(x >= y){
+context.fillStyle = document.querySelector('input[name = "color"]:checked').value; 
+context.fillRect(x + x0, y + y0, 1, 1);
+context.fillRect(y + x0, x + y0, 1, 1);
+context.fillRect(-x + x0, y + y0, 1, 1);
+context.fillRect(-y + x0, x + y0, 1, 1);
+context.fillRect(-x + x0, -y + y0, 1, 1);
+context.fillRect(-y + x0, -x + y0, 1, 1);
+context.fillRect(x + x0, -y + y0, 1, 1);
+context.fillRect(y + x0, -x + y0, 1, 1);
+y++;
+if (error<0){
+error += 2 * y + 1;
+}
+else {
+x--;
+error += 2 * (y - x) + 1;
+}
+}
+}
+
+</script>
+</body>
+</html>
