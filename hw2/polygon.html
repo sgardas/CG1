@@ -1,0 +1,95 @@
+<!-- Satwik Gardas -->
+<!-- 01639615 -->
+<!-- Satwik_Gardas@student.uml.edu -->
+<!-- Programming Assignment 2 -->
+<!-- http://www.cs.uml.edu/~sgardas/427546s2018/prog-hws2/ -->
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script src="https://cdn.rawgit.com/konvajs/konva/1.7.6/konva.min.js"></script>
+  <meta charset="utf-8">
+  <title> </title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: snow;
+    }
+  </style>
+</head>
+
+<body>
+    
+    Enter Driver Score here
+<input type="number" id="score" min="1" max="79" name="score"/>
+    <input type="button" value="GO" onclick="f_score()"/>
+    
+    
+  <div id="container"></div>
+  <script>
+    var stage = new Konva.Stage({
+      container: 'container',
+      width: window.innerWidth,
+      height: window.innerHeight
+    });
+      
+       var layer = new Konva.Layer();
+      layer.clearBeforeDraw();
+      var n;
+      var polygon;
+      var angularSpeed = 75;
+      var anim;
+      
+      function f_score(){
+          layer.destroyChildren();
+          n = document.getElementById("score").value;
+          polygon = new Konva.RegularPolygon({
+      x: stage.getWidth() / 2,
+      y: stage.getHeight() / 2,
+      sides: n,
+      radius: 70,
+      fill: 'white',
+      stroke: 'black',
+      strokeWidth: 4,
+        shadowColor: 'black',
+            shadowBlur: 0,
+            shadowOffset: {x : 10, y : 10},
+            shadowOpacity: 0.7,
+        draggable: true,
+        offset: {
+            x: 10,
+            y: 10
+        }
+    });
+          
+            layer.add(polygon);
+
+    // add the layer to the stage
+    stage.add(layer);
+          
+          anim = new Konva.Animation(function(frame) {
+        var angleDiff = frame.timeDiff * angularSpeed / 1000;
+        polygon.rotate(angleDiff);
+
+    }, layer);
+
+    anim.start();
+          
+      }
+
+      polygon.on('mouseenter', function () {
+            stage.container().style.cursor = 'pointer';
+        });
+
+        polygon.on('mouseleave', function () {
+            stage.container().style.cursor = 'default';
+        });
+
+     
+  </script>
+
+</body>
+
+<
