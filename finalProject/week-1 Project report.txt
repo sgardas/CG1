@@ -1,0 +1,12 @@
+Satwik Gardas
+Satwik_Gardas@student.uml.edu
+01639615
+http://www.cs.uml.edu/~sgardas/427546s2018/finalProject/
+
+ 
+ week-1 folder contains index.html, cube.html, house.html files.
+ I have used svg to draw different shapes like lines, rectangles, circles and paths.
+ I implemented top view, side view, front view of House and cube
+ 
+ Future work:
+ Applying Transformations and different projections.
