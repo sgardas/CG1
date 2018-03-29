@@ -1,0 +1,6 @@
+Satwik Gardas
+Satwik_Gardas@student.uml.edu
+016396156
+
+This Project is implemented in HTML/CSS. It doesnot require any specific build or compiliation instructions.
+It supports IE, Mozilla, Chrome.
