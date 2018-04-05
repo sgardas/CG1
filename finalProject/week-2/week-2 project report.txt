@@ -1,0 +1,20 @@
+Satwik Gardas
+Satwik_Gardas@student.uml.edu
+01639615
+http://www.cs.uml.edu/~sgardas/427546s2018/finalProject/
+
+ 
+ Week2:
+ 
+ In this week I implemented different 3D tranformations of the cube. I have used the coordinates I had used in the previous week progress.
+ I implemented features like
+ 1.Transform
+
+ 2.scale
+ 
+ 3.shear
+ 
+ 4.rotate
+ 
+ Future work:
+ Different projects and multiple views.

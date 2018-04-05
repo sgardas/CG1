@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>CG week-2</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+
+<div id="maindiv" class="container">
+  <h3>week-2</h3><br>
+  
+  <br> 
+	<div id="divfront" style="float:left;width:50%;border: 2px solid; "> 
+			<div id="divfrontsvg" style="overflow:hidden;background-color: white;"> 
+			<h3>Front View</h3>
+				<svg id="front" height="400" width="900" style="">	
+						 <polyline points="50,200 150,200 150,100 50,100 50,200" style="fill:#89dd52;stroke:black;stroke-width:2" />
+
+							<line x1="60" y1="190" x2="140" y2="190" stroke-width="2" stroke="black" stroke-dasharray="3"/>
+							<line x1="140" y1="190" x2="140" y2="110" stroke-width="2" stroke="black" stroke-dasharray="3"/>
+							<line x1="140" y1="110" x2="60" y2="110" stroke-width="2" stroke="black" stroke-dasharray="3"/>
+							<line x1="60" y1="110" x2="60" y2="190" stroke-width="2" stroke="black" stroke-dasharray="3"/>
+
+							<line x1="60" y1="190" x2="50" y2="200" stroke-width="2" stroke="black" stroke-dasharray="3"/>
+							<line x1="140" y1="190" x2="150" y2="200" stroke-width="2" stroke="black" stroke-dasharray="3"/>
+							<line x1="150" y1="100" x2="140" y2="110" stroke-width="2" stroke="black" stroke-dasharray="3"/>
+							<line x1="50" y1="100" x2="60" y2="110" stroke-width="2" stroke="black" stroke-dasharray="3"/>
+
+				</svg> 
+			</div>
+			<hr size="60" >
+			<div id="divfronttrans" style="padding-left: 30px; padding-bottom: 30px"> 
+					 
+						  Translate : 
+						   <table border="1" style="width:100%">
+							  <tr>
+								<td>X axis : </td>
+								<td><input type="range" name ="fxtrans" id="trans" min="100" max="400"value="100" onchange="translatex(this.value)"></td>
+								<td>Y axis : </td>
+								<td><input type="range" id="trans" min="100" max="200"value="100" onchange="translatey(this.value)"></td> 
+								<td>Z axis : </td>
+								<td><input type="range" id="trans" min="100" max="400"value="100" onchange="translatez(this.value)"></td>
+							  </tr>
+							</table>
+						    Value : <input id="ftrans" type="text" name="fname" value="100"><br>
+							<hr size="60" >
+								   
+						  Rotate :
+							<table border="1" style="width:100%">
+							  <tr>
+								<td>X axis : </td>
+								<td><input type="range" id="trans"  min="0" max="360"value="0" onchange="rotatex(this.value)"></td>
+								<td>Y axis : </td>
+								<td><input type="range" id="trans"  min="0" max="360"value="0" onchange="rotatey(this.value)"></td> 
+								<td>Z axis : </td>
+								<td><input type="range" id="trans"  min="0" max="360"value="0" onchange="rotatez(this.value)"></td>
+							  </tr>
+							</table>
+						    Value : <input id="frot" type="text" name="fname" value="0 deg"><br>
+							<hr size="60" >
+									
+						  Scale : 
+						  <table border="1" style="width:100%">
+							  <tr>
+								<td>X axis : </td>
+								<td><input type="range" id="trans"  min="1" max="2" step='0.05' value="1" onchange="frontscalex(this.value)"></td>
+								<td>Y axis : </td>
+								<td><input type="range" id="trans"  min="1" max="2" step='0.05' value="1" onchange="frontscaley(this.value)"></td> 
+								<td>Z axis : </td>
+								<td><input type="range" id="trans"  min="1" max="2" step='0.05' value="1" onchange="frontscalez(this.value)"></td>
+							  </tr>
+						  </table>
+						  Value : <input id="fscale" type="text" name="fname" value="1"><br>
+						  <hr size="60" >
+						  
+						  Shear :
+								  <table border="1" style="width:100%">
+									  <tr>
+										<td>X axis : </td>
+										<td><input type="range" id="trans"  min="0" max="360"value="0" onchange="frontshearx(this.value)"></td>
+										<td>Y axis : </td>
+										<td><input type="range" id="trans"  min="0" max="360"value="0" onchange="frontsheary(this.value)"></td> 
+										<td>Z axis : </td>
+										<td><input type="range" id="trans"  min="0" max="360"value="0" onchange="frontshearz(this.value)"></td>
+									  </tr>
+									</table>
+								   Value : <input id="fskew" type="text" name="fname" value="0 deg"><br>
+								   
+			</div>
+	</div>
+
+	<div id="divside" style="float:left;width:50%;border: 2px solid">
+			<div id="divsidesvg" style="overflow:hidden;background-color: white;"> 
+			<h3>Side View</h3>
+					<svg id="side" width="900" height="400">	
+					  		<polyline points="100,200 100,100 30,105 30,195 100,200" style="fill:blue;stroke:black;stroke-width:2" />
+						<polyline points="100,200 100,100 170,105 170,195 100,200" style="fill:pink;stroke:black;stroke-width:2" />		  
+				</svg>
+			</div><hr size="60" >
+			<div id="divsidetrans" style="padding-left: 30px; padding-bottom: 30px"> 
+						  Translate : 
+						   <table border="1" style="width:100%">
+							  <tr>
+								<td>X axis : </td>
+								<td><input type="range" id="trans" min="100" max="360"value="100" onchange="funcsidetransx(this.value)"></td>
+								<td>Y axis : </td>
+								<td><input type="range" id="trans" min="100" max="360"value="100" onchange="funcsidetransy(this.value)"></td> 
+								<td>Z axis : </td>
+								<td><input type="range" id="trans" min="100" max="360"value="100" onchange="funcsidetransz(this.value)"></td>
+							  </tr>
+							</table>
+						    Value : <input id="sidetranslate" type="text" name="fname" value="100"><br>
+							<hr size="60" >
+								   
+						  Rotate :
+							<table border="1" style="width:100%">
+							  <tr>
+								<td>X axis : </td>
+								<td><input type="range" id="trans"  min="0" max="360"value="0" onchange="funcsiderotx(this.value)"></td>
+								<td>Y axis : </td>
+								<td><input type="range" id="trans"  min="0" max="360"value="0" onchange="funcsideroty(this.value)"></td> 
+								<td>Z axis : </td>
+								<td><input type="range" id="trans"  min="0" max="360"value="0" onchange="funcsiderotz(this.value)"></td>
+							  </tr>
+							</table>
+						    Value : <input id="srot" type="text" name="fname" value="0 deg"><br>
+							<hr size="60" >
+									
+						  Scale : 
+						  <table border="1" style="width:100%">
+							  <tr>
+								<td>X axis : </td>
+								<td><input type="range" id="trans"  min="1" max="2" step='0.05' value="1" onchange="funcsidescalex(this.value)"></td>
+								<td>Y axis : </td>
+								<td><input type="range" id="trans"  min="1" max="2" step='0.05' value="1" onchange="funcsidescaley(this.value)"></td> 
+								<td>Z axis : </td>
+								<td><input type="range" id="trans"  min="1" max="2" step='0.05' value="1" onchange="funcsidescalez(this.value)"></td>
+							  </tr>
+						  </table>
+						  Value : <input id="sscale" type="text" name="fname" value="1"><br>
+						  <hr size="60" >
+						  
+						  Shear :
+								  <table border="1" style="width:100%">
+									  <tr>
+										<td>X axis : </td>
+										<td><input type="range" id="trans"  min="0" max="360"value="0" onchange="funcsideshearx(this.value)"></td>
+										<td>Y axis : </td>
+										<td><input type="range" id="trans"  min="0" max="360"value="0" onchange="funcsidesheary(this.value)"></td> 
+										<td>Z axis : </td>
+										<td><input type="range" id="trans"  min="0" max="360"value="0" onchange="funcsideshearz(this.value)"></td>
+									  </tr>
+									</table>
+								   Value : <input id="sskew" type="text" name="fname" value="0 deg"><br>
+								  
+			</div>
+	</div>
+
+	<div id="divtop" style="float:left;width:50%;border: 2px solid">
+			<div id="divtopsvg" style="overflow:hidden;background-color: white;"> 
+			<h3>Top View</h3>
+				<svg id="top" height="400" width="900">	
+		
+						  <polyline points="100,300 90,200 181,157 182,243 100,300" style="fill:blue;stroke:black;stroke-width:2" />
+					<polyline points="100,300 90,200 13,156 24,236 100,300" style="fill:pink;stroke:black;stroke-width:2" />
+					<polyline points="90,200 13,156 105,114 181,157 90,200" style="fill:#435c84;stroke:black;stroke-width:2" />
+				</svg> 
+			</div><hr size="60" >
+			<div id="divtoptrans" style="padding-left: 30px; padding-bottom: 30px"> 
+						<span style="display: inline-box">
+							 Translate : 
+						   <table border="1" style="width:100%">
+							  <tr>
+								<td>X axis : </td>
+								<td><input type="range" id="trans" min="100" max="400"value="100" onchange="functoptransx(this.value)"></td>
+								<td>Y axis : </td>
+								<td><input type="range" id="trans" min="100" max="400"value="100" onchange="functoptransy(this.value)"></td> 
+								<td>Z axis : </td>
+								<td><input type="range" id="trans" min="100" max="400"value="100" onchange="functoptransz(this.value)"></td>
+							  </tr>
+							</table>
+						    Value : <input id="ttrans" type="text" name="fname" value="100"><br>
+							<hr size="60" >
+								   
+						  Rotate :
+							<table border="1" style="width:100%">
+							  <tr>
+								<td>X axis : </td>
+								<td><input type="range" id="trans"  min="0" max="360"value="0" onchange="functoprotx(this.value)"></td>
+								<td>Y axis : </td>
+								<td><input type="range" id="trans"  min="0" max="360"value="0" onchange="functoproty(this.value)"></td> 
+								<td>Z axis : </td>
+								<td><input type="range" id="trans"  min="0" max="360"value="0" onchange="functoprotz(this.value)"></td>
+							  </tr>
+							</table>
+						    Value : <input id="trot" type="text" name="fname" value="0 deg"><br>
+							<hr size="60" >
+									
+						  Scale : 
+						  <table border="1" style="width:100%">
+							  <tr>
+								<td>X axis : </td>
+								<td><input type="range" id="trans" min="1" max="2" step='0.05' value="1" onchange="functopscalex(this.value)"></td>
+								<td>Y axis : </td>
+								<td><input type="range" id="trans" min="1" max="2" step='0.05' value="1" onchange="functopscaley(this.value)"></td> 
+								<td>Z axis : </td>
+								<td><input type="range" id="trans" min="1" max="2" step='0.05' value="1" onchange="functopscalez(this.value)"></td>
+							  </tr>
+						  </table>
+						  Value : <input id="tscale" type="text" name="fname" value="1"><br>
+						  <hr size="60" >
+						  
+						  Shear :
+								  <table border="1" style="width:100%">
+									  <tr>
+										<td>X axis : </td>
+										<td><input type="range" id="trans"  min="0" max="360"value="0" onchange="functopshearx(this.value)"></td>
+										<td>Y axis : </td>
+										<td><input type="range" id="trans"  min="0" max="360"value="0" onchange="functopsheary(this.value)"></td> 
+										<td>Z axis : </td>
+										<td><input type="range" id="trans"  min="0" max="360"value="0" onchange="functopshearz(this.value)"></td>
+									  </tr>
+									</table>
+								   Value : <input id="tskew" type="text" name="fname" value="0 deg"><br>
+			</div>
+	</div>
+
+</div>
+
+ <script>
+	
+	
+	//functions to perform 3D transformations on front view
+	function translatex(value) {
+	document.getElementById("ftrans").value=value;
+    var x = value;
+	var y="translateX("+x+"px)";
+	document.getElementById("front").style.transform = y;
+	}
+	
+	function translatey(value) {
+	document.getElementById("ftrans").value=value;
+    var x = value;
+	var y="translateY("+x+"px)";
+	document.getElementById("front").style.transform = y;
+	}
+	
+	function translatez(value) {
+	document.getElementById("ftrans").value=value;
+    var x = value;
+	var y="translateZ("+x+"px)";
+	document.getElementById("front").style.transform = y;
+	}
+	
+	function rotatex(value) {
+	var i=value+" deg";
+    document.getElementById("frot").value=i;
+    var x = value;
+	var y="rotateX("+x+"deg)";
+	document.getElementById("front").style.transform = y;
+	//document.getElementById("front").style.transform = "rotate(20deg)";
+	}
+	
+	function rotatey(value) {
+	var i=value+" deg";
+    document.getElementById("frot").value=i;
+    var x = value;
+	var y="rotateY("+x+"deg)";
+	document.getElementById("front").style.transform = y;
+	//document.getElementById("front").style.transform = "rotate(20deg)";
+	}
+	
+	function rotatez(value) {
+	var i=value+" deg";
+    document.getElementById("frot").value=i;
+    var x = value;
+	var y="rotateZ("+x+"deg)";
+	document.getElementById("front").style.transform = y;
+	//document.getElementById("front").style.transform = "rotate(20deg)";
+	}
+	
+	function frontscalex(value) {
+    document.getElementById("fscale").value=value;
+    var x = value;
+	var y="scaleX("+x+")";
+	document.getElementById("front").style.transform = y;
+	}
+	
+	function frontscaley(value) {
+    document.getElementById("fscale").value=value;
+    var x = value;
+	var y="scaleY("+x+")";
+	document.getElementById("front").style.transform = y;
+	}
+	
+	function frontscalez(value) {
+    document.getElementById("fscale").value=value;
+    var x = value;
+	var y="scaleZ("+x+")";
+	document.getElementById("front").style.transform = y;
+	}
+	
+	function frontshearx(value) {
+	var i=value+" deg";
+    document.getElementById("fskew").value=i;
+    var x = value;
+	var y="skewX("+x+"deg)";
+	document.getElementById("front").style.transform = y;
+	}
+	
+	function frontsheary(value) {
+	var i=value+" deg";
+    document.getElementById("fskew").value=i;
+    var x = value;
+	var y="skewY("+x+"deg)";
+	document.getElementById("front").style.transform = y;
+	}
+	
+	function frontshearz(value) {
+	var i=value+" deg";
+    document.getElementById("fskew").value=i;
+    var x = value;
+	var y="skewZ("+x+"deg)";
+	document.getElementById("front").style.transform = y;
+	}
+	//functions to perform 3D transformations on side view
+	function funcsidetransx(value) {
+	document.getElementById("sidetranslate").value=value;
+    var x = value;
+	var y="translateX("+x+"px)";
+	document.getElementById("side").style.transform = y;
+	}
+	
+	function funcsidetransy(value) {
+	document.getElementById("sidetranslate").value=value;
+    var x = value;
+	var y="translateY("+x+"px)";
+	document.getElementById("side").style.transform = y;
+	}
+	
+	function funcsidetransz(value) {
+	document.getElementById("sidetranslate").value=value;
+    var x = value;
+	var y="translateZ("+x+"px)";
+	document.getElementById("side").style.transform = y;
+	}
+	
+	function funcsiderotx(value) {
+	var i=value+" deg";
+    document.getElementById("srot").value=i;
+    var x = value;
+	var y="rotateX("+x+"deg)";
+	document.getElementById("side").style.transform = y;
+	}
+	
+	function funcsideroty(value) {
+	var i=value+" deg";
+    document.getElementById("srot").value=i;
+    var x = value;
+	var y="rotateY("+x+"deg)";
+	document.getElementById("side").style.transform = y;
+	}
+	function funcsiderotz(value) {
+	var i=value+" deg";
+    document.getElementById("srot").value=i;
+    var x = value;
+	var y="rotateZ("+x+"deg)";
+	document.getElementById("side").style.transform = y;
+	}
+	
+	function funcsidescalex(value) {
+    document.getElementById("sscale").value=value;
+    var x = value;
+	var y="scaleX("+x+")";
+	document.getElementById("side").style.transform = y;
+	}
+	
+	function funcsidescaley(value) {
+    document.getElementById("sscale").value=value;
+    var x = value;
+	var y="scaleY("+x+")";
+	document.getElementById("side").style.transform = y;
+	}
+	function funcsidescalez(value) {
+    document.getElementById("sscale").value=value;
+    var x = value;
+	var y="scaleZ("+x+")";
+	document.getElementById("side").style.transform = y;
+	}
+	
+	function funcsideshearx(value) {
+	var i=value+" deg";
+    document.getElementById("sskew").value=i;
+    var x = value;
+	var y="skewX("+x+"deg)";
+	document.getElementById("side").style.transform = y;
+	}
+	
+	function funcsidesheary(value) {
+	var i=value+" deg";
+    document.getElementById("sskew").value=i;
+    var x = value;
+	var y="skewY("+x+"deg)";
+	document.getElementById("side").style.transform = y;
+	}
+	function funcsideshearz(value) {
+	var i=value+" deg";
+    document.getElementById("sskew").value=i;
+    var x = value;
+	var y="skewZ("+x+"deg)";
+	document.getElementById("side").style.transform = y;
+	}
+	
+	//functions to perform 3D transformations on top view
+	
+	function functoptransx(value) {
+	document.getElementById("ttrans").value=value;
+    var x = value;
+	var y="translateX("+x+"px)";
+	document.getElementById("top").style.transform = y;
+	}
+	
+	function functoptransy(value) {
+	document.getElementById("ttrans").value=value;
+    var x = value;
+	var y="translateY("+x+"px)";
+	document.getElementById("top").style.transform = y;
+	}
+	function functoptransz(value) {
+	document.getElementById("ttrans").value=value;
+    var x = value;
+	var y="translateZ("+x+"px)";
+	document.getElementById("top").style.transform = y;
+	}
+	
+	function functoprotx(value) {
+	var i=value+" deg";
+    document.getElementById("trot").value=i;
+    var x = value;
+	var y="rotateX("+x+"deg)";
+	document.getElementById("top").style.transform = y;
+	}
+	
+	function functoproty(value) {
+	var i=value+" deg";
+    document.getElementById("trot").value=i;
+    var x = value;
+	var y="rotateY("+x+"deg)";
+	document.getElementById("top").style.transform = y;
+	}
+	function functoprotz(value) {
+	var i=value+" deg";
+    document.getElementById("trot").value=i;
+    var x = value;
+	var y="rotateZ("+x+"deg)";
+	document.getElementById("top").style.transform = y;
+	}
+	function functopscalex(value) {
+    document.getElementById("tscale").value=value;
+    var x = value;
+	var y="scaleX("+x+")";
+	document.getElementById("top").style.transform = y;
+	}
+	
+	function functopscaley(value) {
+    document.getElementById("tscale").value=value;
+    var x = value;
+	var y="scaleY("+x+")";
+	document.getElementById("top").style.transform = y;
+	}
+	function functopscalez(value) {
+    document.getElementById("tscale").value=value;
+    var x = value;
+	var y="scaleZ("+x+")";
+	document.getElementById("top").style.transform = y;
+	}
+	function functopshearx(value) {
+	var i=value+" deg";
+    document.getElementById("tskew").value=i;
+    var x = value;
+	var y="skewX("+x+"deg)";
+	document.getElementById("top").style.transform = y;
+	}
+	function functopsheary(value) {
+	var i=value+" deg";
+    document.getElementById("tskew").value=i;
+    var x = value;
+	var y="skewY("+x+"deg)";
+	document.getElementById("top").style.transform = y;
+	}
+	function functopshearz(value) {
+	var i=value+" deg";
+    document.getElementById("tskew").value=i;
+    var x = value;
+	var y="skewZ("+x+"deg)";
+	document.getElementById("top").style.transform = y;
+	}
+  </script>
