@@ -1,0 +1,14 @@
+Satwik Gardas
+Satwik_Gardas@student.uml.edu
+01639615
+http://www.cs.uml.edu/~sgardas/427546s2018/finalProject/
+
+ 
+ Week2:
+ 
+ In this week, I implemented the rotation of cube. I used <svg> and css to implement cube rotation. I also tried implementing mouse events such as onclick drag, onclick rotations but unfortunartely ended in errors. 
+ 
+ Future work:
+ 1.Different projections and multiple views.
+ 2. Transforming the light..
+ 3. Add additional features to week-3.
