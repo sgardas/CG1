@@ -4,7 +4,7 @@ Satwik_Gardas@student.uml.edu
 http://www.cs.uml.edu/~sgardas/427546s2018/finalProject/
 
  
- Week3:
+ Week2:
  
  In this week, I implemented the rotation of cube. I used <svg> and css to implement cube rotation. I also tried implementing mouse events such as onclick drag, onclick rotations but unfortunartely ended in errors. 
  

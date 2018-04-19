@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Computer Graphics</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <h3>Computer Graphics - week4</h3><br>
+  
+    <p><b>Texture mapping: <a href="texture.html">Texture mapping of sphere</a></b></p>
+
+    
+  <br>
+    <p><strong> This page shows 8 different projection types of cube. i.e. 1. Multiview Orthographic  2.Isometric  3.Dimetric  4.Trimetric  5.Oblique  6.One Point   7.Two Point  8.Three Point</strong></p>
+
+  <hr size="60" >
+  <p><strong>1. Multiview Orthographic Projections</strong></p>
+  
+		  <table border="1" style="width:100%">
+		  <tr>
+			<td><h4>Front View</h4><svg width="400" height="400" align="center"><polyline points="60,180 160,180 160,80 60,80 60,180" style="fill:blue;stroke:black;stroke-width:2"/></svg></td>
+			<td><h4>Side View</h4><svg width="400" height="400" align="center"><polyline points="60,220 160,220 160,320 60,320 60,220" style="fill:pink;stroke:black;stroke-width:2"/></svg></td> 
+			<td><h4>Top View</h4><svg width="400" height="400" align="center"><polyline points="200,180 300,180 300,80 200,80 200,180" style="fill:green;stroke:black;stroke-width:2"/></svg></td>
+		  </tr>
+			</table>
+			
+	<hr size="60" >
+	<p><strong>2. Isometric Projection</strong></p>
+  
+			  <table border="1" style="width:100%">
+			  <tr>
+				<td>
+					<svg width="400" height="400" align="center" style="margin-left:450px">
+						<polyline points="100,300 100,200 14,150 14,250 100,300" style="fill:Azure  ;stroke:black;stroke-width:2"/>
+						<polyline points="100,300 100,200 186,150 186,250 100,300" style="fill:Beige  ;stroke:black;stroke-width:2"/>
+						<polyline points="100,200 14,150 100,101 186,150 100,200" style="fill:Bisque  ;stroke:black;stroke-width:2"/>
+						<line x1="100" y1="101" x2="100" y2="201" stroke-width="2" stroke="black" stroke-dasharray="3"/>
+						<line x1="100" y1="201" x2="14" y2="250" stroke-width="2" stroke="black" stroke-dasharray="3"/>
+						<line x1="100" y1="201" x2="186" y2="250" stroke-width="2" stroke="black" stroke-dasharray="3"/>
+					</svg>
+				</td>
+			   </tr>
+				</table>
+	
+	<hr size="60" >
+	<p><strong>3. Dimetric Projection</strong></p>
+				<table border="1" style="width:100%">
+				  <tr>
+					<td>
+						<svg width="400" height="400" align="center" style="margin-left:450px">
+							<polyline points="100,300 100,200 7,166 7,266 100,300" style="fill:Azure;stroke:black;stroke-width:2"/>
+							<polyline points="100,300 100,200 193,166 193,266 100,300" style="fill:Beige;stroke:black;stroke-width:2"/>
+							<polyline points="100,200 7,166 100,133 193,166 100,200" style="fill:Bisque;stroke:black;stroke-width:2"/>
+							<line x1="100" y1="133" x2="100" y2="233" stroke-width="2" stroke="black" stroke-dasharray="3"/>
+							<line x1="100" y1="233" x2="193" y2="266" stroke-width="2" stroke="black" stroke-dasharray="3"/>
+							<line x1="100" y1="233" x2="7" y2="266" stroke-width="2" stroke="black" stroke-dasharray="3"/>
+						</svg>
+					</td>
+				   </tr>
+				</table>
+				
+	<hr size="60" >
+	<p><strong>4. Trimetric Projection</strong></p>
+				<table border="1" style="width:100%">
+				  <tr>
+					<td>
+						<svg width="400" height="400" align="center" style="margin-left:450px">
+							<polyline points="100,300 100,200 7,166 7,266 100,300" style="fill:Azure;stroke:black;stroke-width:2"/>
+							<polyline points="100,300 100,200 158,132 158,232 100,300" style="fill:Beige;stroke:black;stroke-width:2"/>
+							<polyline points="100,200 7,166 64,97 158,132 100,200" style="fill:Bisque;stroke:black;stroke-width:2"/>
+
+							<line x1="64" y1="97" x2="64" y2="197" stroke-width="2" stroke="black" stroke-dasharray="3"/>
+							<line x1="64" y1="197" x2="7" y2="266" stroke-width="2" stroke="black" stroke-dasharray="3"/>
+							<line x1="64" y1="197" x2="158" y2="232" stroke-width="2" stroke="black" stroke-dasharray="3"/>
+						</svg>
+					</td>
+				   </tr>
+				</table>
+	<hr size="60" >
+	<p><strong>5.Oblique Projection (30 - 65)</strong></p>
+  
+			  <table border="1" style="width:100%">
+			  <tr>
+				<td>
+					<svg width="400" height="400" align="center" style="margin-left:450px">
+							
+							<polyline points="50,200 150,200 150,100 50,100 50,200" style="fill:Azure;stroke:black;stroke-width:2"/>
+							<polyline points="150,200 160,183 160,83 150,100 150,200" style="fill:Beige;stroke:black;stroke-width:2"/>
+							<polyline points="50,100 150,100 160,83 60,83 50,100" style="fill:Bisque;stroke:black;stroke-width:2"/>
+
+							<line x1="60" y1="83" x2="60" y2="183" stroke-width="2" stroke="black" stroke-dasharray="3"/>
+							<line x1="160" y1="183" x2="60" y2="183" stroke-width="2" stroke="black" stroke-dasharray="3"/>
+							<line x1="50" y1="200" x2="60" y2="183" stroke-width="2" stroke="black" stroke-dasharray="3"/>
+					</svg>
+						</td>
+					   </tr>
+						</table>
+			<hr size="60" >
+	<p><strong>5.Oblique Projection (45)</strong></p>
+  
+			  <table border="1" style="width:100%">
+			  <tr>
+				<td>
+					<svg width="400" height="400" align="center" style="margin-left:450px">
+							
+							<polyline points="50,200 150,200 150,100 50,100 50,200" style="fill:Azure;stroke:black;stroke-width:2"/>
+							<polyline points="150,200 185,165 185,65 150,100 150,200" style="fill:Beige;stroke:black;stroke-width:2"/>
+							<polyline points="50,100 150,100 185,65 85,65 50,100" style="fill:Bisque;stroke:black;stroke-width:2"/>
+
+							<line x1="85" y1="65" x2="85" y2="165" stroke-width="2" stroke="black" stroke-dasharray="3"/>
+							<line x1="185" y1="165" x2="85" y2="165" stroke-width="2" stroke="black" stroke-dasharray="3"/>
+							<line x1="50" y1="200" x2="85" y2="165" stroke-width="2" stroke="black" stroke-dasharray="3"/>
+
+					</svg>
+						</td>
+					   </tr>
+						</table>
+			<hr size="60" >
+			
+			<hr size="60" >
+	<p><strong>6.One Point Projection</strong></p>
+  
+			  <table border="1" style="width:100%">
+			  <tr>
+				<td>
+					<svg width="400" height="400" align="center" style="margin-left:450px">
+							
+							<polyline points="50,200 150,200 150,100 50,100 50,200" style="fill:Azure;stroke:black;stroke-width:2" />
+
+							<line x1="60" y1="190" x2="140" y2="190" stroke-width="2" stroke="black" stroke-dasharray="3"/>
+							<line x1="140" y1="190" x2="140" y2="110" stroke-width="2" stroke="black" stroke-dasharray="3"/>
+							<line x1="140" y1="110" x2="60" y2="110" stroke-width="2" stroke="black" stroke-dasharray="3"/>
+							<line x1="60" y1="110" x2="60" y2="190" stroke-width="2" stroke="black" stroke-dasharray="3"/>
+
+							<line x1="60" y1="190" x2="50" y2="200" stroke-width="2" stroke="black" stroke-dasharray="3"/>
+							<line x1="140" y1="190" x2="150" y2="200" stroke-width="2" stroke="black" stroke-dasharray="3"/>
+							<line x1="150" y1="100" x2="140" y2="110" stroke-width="2" stroke="black" stroke-dasharray="3"/>
+							<line x1="50" y1="100" x2="60" y2="110" stroke-width="2" stroke="black" stroke-dasharray="3"/>
+
+					</svg>
+						</td>
+					   </tr>
+						</table>
+						
+						<hr size="60" >
+	<p><strong>7.Two Point Projection</strong></p>
+  
+			  <table border="1" style="width:100%">
+			  <tr>
+				<td>
+					<svg width="400" height="400" align="center" style="margin-left:450px">
+							
+							<polyline points="100,200 100,100 30,105 30,195 100,200" style="fill:Azure;stroke:black;stroke-width:2" />
+						<polyline points="100,200 100,100 170,105 170,195 100,200" style="fill:Beige;stroke:black;stroke-width:2" />
+
+					</svg>
+						</td>
+					   </tr>
+						</table>
+						
+						<hr size="60" >
+	<p><strong>8.Three Point Projection</strong></p>
+  
+			  <table border="1" style="width:100%">
+			  <tr>
+				<td>
+					<svg width="400" height="400" align="center" style="margin-left:450px">
+							
+							
+					<polyline points="100,300 90,200 181,157 182,243 100,300" style="fill:Beige;stroke:black;stroke-width:2" />
+					<polyline points="100,300 90,200 13,156 24,236 100,300" style="fill:Azure;stroke:black;stroke-width:2" />
+					<polyline points="90,200 13,156 105,114 181,157 90,200" style="fill:Bisque;stroke:black;stroke-width:2" />
+
+
+					</svg>
+						</td>
+					   </tr>
+						</table>
+						<hr size="60" >
+  </div>
+
+</body>
+</html>

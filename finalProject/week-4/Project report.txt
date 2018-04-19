@@ -1,0 +1,14 @@
+Satwik Gardas
+Satwik_Gardas@student.uml.edu
+01639615
+http://www.cs.uml.edu/~sgardas/427546s2018/finalProject/
+
+ 
+ Week4:
+ 
+ In this week, I implemented 8 projections of the cube and also I implemented the texture mapping using gl.
+ 
+ Future work:
+Transforming the light/camera..
+Add additional features to week-3.
+implement vanishing points
