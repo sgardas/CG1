@@ -1,0 +1,10 @@
+Satwik Gardas
+Satwik_Gardas@student.uml.edu
+01639615
+http://www.cs.uml.edu/~sgardas/427546s2018/finalProject/
+
+ 
+ Week5:
+ 
+
+In this week, I implemented Texture, bump, environment mapping for house,  transforming cube using the camera angle, added lightening feature to the cube, also made cube rotatw with mouse controls.
